@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Symfony test</title>
+    <meta name="description" content="Test">
+</head>
+
+<body>
+{% if response == true %}
+    <p>The timezone {{ timezone }} has {% if minutes > 0 %} +{% endif %}{{ minutes }} minutes offset to UTC.<br />
+        February in this year has {{ februaryDays }} days.<br />
+        Specified month ({{ month }}) has {{ specMonthDays }} days.</p>
+{% endif %}
+<form action="/processed-dates" method="post">
+    Date: <input  type="date" name="date"><br>
+    Timezone: <input  type="text" name="timezone"><br>
+    <input type="submit"  name="submit" value="Send">
+</form>
+</body>
+</html>

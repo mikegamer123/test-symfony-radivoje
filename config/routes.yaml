@@ -1,5 +1,6 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+dates:
+  path: /
+  controller: App\Controller\DatesController::index
+processDates:
+  path: /processed-dates
+  controller: App\Controller\DatesController::processDates
